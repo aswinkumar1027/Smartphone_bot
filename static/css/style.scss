@@ -1,0 +1,156 @@
+@font-face {
+    font-family: "Roboto";
+    src: url("../font/Roboto-Regular.ttf");
+}
+
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+}
+
+.title {
+    display: flex;
+    background-color: #3E3E3E;
+    color: #ffffff;
+    width: 100vw;
+    height: 15vh;
+    font-size: 1rem;
+    align-items: center;
+    h1 {
+        padding: 10px;
+    }
+}
+
+.card {
+    padding: 20px;
+    min-width: 80vh;
+    min-height: 10vh;
+    margin: 20px;
+    // background-color: lightblue;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 2px 2px 8px 2px #3e3e3eb4,
+            -2px -2px 8px 2px #ffffffb2 ;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.controller-card {
+    padding: 20px;
+    min-width: 80vw;
+    min-height: 10vh;
+    margin: 20px;
+    // background-color: lightblue;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 2px 2px 8px 2px #3e3e3eb4,
+            -2px -2px 8px 2px #ffffffb2 ;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.one-part {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    // min-width: 10vw;
+    p {
+        padding: 10px;
+    }
+}
+
+.on-btn {
+    margin: 10px 20px;
+    padding: 3px 25px;
+    background-color: #ffffff;
+    border-radius: 25px;
+    border: 2px solid #24d114;
+    color: #24d114;
+    cursor: pointer;
+}
+
+.on-btn:hover{
+    background-color: #24d114;
+    color: #ffffff;
+}
+
+.off-btn {
+    margin: 10px 20px;
+    padding: 3px 25px;
+    background-color: #ffffff;
+    border-radius: 25px;
+    border: 2px solid #d11414;
+    color: #d11414;
+    cursor: pointer;
+}
+
+.off-btn:hover{
+    background-color: #d11414;
+    color: #ffffff;
+}
+
+.controller {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.control-btn{
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+.control-img {
+    width: 64px;
+    height: 64px;
+    margin: 5px 30px;
+}
+
+
+@media screen and (max-width: 800px){
+    .card {
+        margin-top: 20px;
+        min-width: 80vw;
+        min-height: 10vh;
+        // background-color: lightblue;
+        border: none;
+        border-radius: 5px;
+        box-shadow: 2px 2px 8px 2px #3e3e3eb4,
+        -2px -2px 8px 2px #ffffffb2 ;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .one-part {
+        p {
+            padding: 10px;
+        }
+    }
+    .controller-card {
+        padding: 20px;
+        min-width: 80vw;
+        min-height: 10vh;
+        margin: 20px;
+        // background-color: lightblue;
+        border: none;
+        border-radius: 5px;
+        box-shadow: 2px 2px 8px 2px #3e3e3eb4,
+        -2px -2px 8px 2px #ffffffb2 ;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }        
+}
