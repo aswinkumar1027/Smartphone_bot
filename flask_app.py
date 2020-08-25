@@ -207,10 +207,8 @@ robo_actions = {
     "stop": stop_robot,
     "line": line_follow,
     "examine": examine,
-    "pressure": take_pressure,
-    "stop_pressure": stop_pressure,
-    "temperature": take_temp,
-    "tempoff":temp_off,
+    "take_pressure": take_pressure,
+    "take_temp": take_temp,
     "spox":spox
 }
 
