@@ -5,6 +5,7 @@ import gpiozero
 import time
 import serial
 import RPi.GPIO as GPIO
+import os
 
 
 robot = gpiozero.Robot(left=(11,25), right=(9,10))
@@ -19,6 +20,10 @@ GPIO.setmode(GPIO.BCM)
 GPIO.setup(6,GPIO.OUT) #temperature
 GPIO.setup(5,GPIO.OUT) #pressure
 GPIO.setup(26,GPIO.OUT) #spo2
+
+GPIO.output(5,1)
+GPIO.output(6,1)
+GPIO.output(26,1)
 
 rfid_dict = {'E235FC8B\r\n': 'A1', 'C0B4FD79\r\n': 'A4', '340B53B9\r\n': 'A3', '7DC476A9\r\n': 'A2'}
 active_beds = ('A1','A2','A3','A4','A5','A6')                                        #fetch from main server
@@ -145,19 +150,19 @@ def stop_robot():
 
 
 def take_pressure():                                      #pressure taking button
-    GPIO.output(5,1)
-    time.sleep(0.1)
     GPIO.output(5,0)
+    time.sleep(0.1)
+    GPIO.output(5,1)
 
 def take_temp():
-    GPIO.output(6,1)
-    time.sleep(0.4)
     GPIO.output(6,0)
+    time.sleep(0.4)
+    GPIO.output(6,1)
 
 def spox():
-    GPIO.output(26,1)
-    time.sleep(0.5)
     GPIO.output(26,0)
+    time.sleep(0.5)
+    GPIO.output(26,1)
     
 
 def fwd():
