@@ -1,24 +1,8 @@
-def fwd():
-    print("jess")
+d = {123: "A1", 1223: "A2", 134: "A3"}
 
+der = "A1"
 
-robo_actions = {
-    "forward": fwd
-}
-
-
-app = Flask(__name__)
-
-
-@app.route("/")                   
-def hello():                      
-    return render_template('main.html')
-
-@app.route("/move", methods=['GET', 'POST'])                   
-def move():
-    movement = request.form['movement']
-    robo_actions[movement]()
-    return "Moving " + movement
-    
-if __name__ == "__main__":        
-    app.run(host='0.0.0.0', debug=True, use_reloader=False)
+if der in d:
+    print("check_copletae")
+else:
+    print("incomplete")

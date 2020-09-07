@@ -58,9 +58,7 @@ def stop_line_follow():
 
 def rfid_read():
     global turn_left                                   #rfid taking and decisions
-    print("RFID")
-    read_ser=ser.readline()
-    print(read_ser)
+    print("RFID_READ")
     bed = rfid_dict[read_ser]
     
     if (bed in active_beds):
@@ -106,8 +104,15 @@ def check():
 
     print(center.is_active , leftend.is_active , rightend.is_active, leftback.is_active , rightback.is_active)
 
+    read_ser=ser.readline()
+    print(read_ser)
+    read_ser=ser.readline()
+    print(read_ser)
+    
+    if read_ser in rfid_dict:
+        stop_robot()
 
-    if center.is_active and rightend.is_active and leftend.is_active:
+    elif center.is_active and rightend.is_active and leftend.is_active:
         robot.forward()
         print("cross_near")
         #time.sleep(0.3)
