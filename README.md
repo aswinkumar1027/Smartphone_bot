@@ -1,3 +1,9 @@
+sudo date -s "Sept 8 12:31"
+
+sudo apt-get update
+
+
+
 sudo apt-get install libjpeg62-turbo-dev
 
 sudo apt-get install cmake
