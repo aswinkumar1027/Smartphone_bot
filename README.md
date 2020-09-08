@@ -12,7 +12,7 @@ git clone https://github.com/jacksonliam/mjpg-streamer.git
 
 cd ~/mjpg-streamer/mjpg-streamer-experimental
 
-cd ~/mjpg-streamer/mjpg-streamer-experimental
+sudo make clean all
 
 
 sudo rm -rf /opt/mjpg-streamer
