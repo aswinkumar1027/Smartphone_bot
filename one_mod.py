@@ -105,34 +105,28 @@ def turn_robot():
           #  print("robot_stopped")
            # break
 
+
 def mod_turn_robot():
+    robot.forward()
+    time.sleep(0.3)
     if turn_left:                                  #interaction left turning
         print("turning_left")
         robot.left()
     else:
         print("turning_right")
         robot.right()
-    time.sleep(0.7)
     print("turn is here")
+    
     while True:
         if center.is_active:
-            print("center_active")
-            time.sleep(0.2)
-            print("time_implemented")   #implement timne delay
-            robot.stop()
-            print("robot_stopped")
-            break
-    if turn_left:
-        robot.left()
-        time.sleep(0.4)
-        robot.forward()
-        time.sleep(0.3)
-        robot.stop()
-       
-    else:
-        print("turning_right2")
-        robot.right()
-        time.sleep(0.5)
+           print("center_active")
+           time.sleep(0.2)
+           print("time_implemented")   #implement timne delay
+           robot.stop()
+           print("robot_stopped")
+           break
+
+
 
 def rfid():
     global rfid_cpy
